@@ -15,6 +15,5 @@ public class ArticleController {
     public ArticleController(ArticleService articleService,UserService userService){
         this.articleService = articleService;
         this.userService = userService;
-
     }
 }
