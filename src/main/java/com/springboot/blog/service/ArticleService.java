@@ -19,7 +19,7 @@ public class ArticleService {
         if(article.getId() == null){
             article.setId(UUID.randomUUID().toString());
         }
-        re
+        return articleRepository.save(article);
     }
 
 }
