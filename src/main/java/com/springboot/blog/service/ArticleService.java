@@ -34,7 +34,7 @@ public class ArticleService {
     }
 
     public Optional<Article> getById(String id){
-        return articleRepository.findById(id)
+        return articleRepository.findById(id);
     }
 
 
