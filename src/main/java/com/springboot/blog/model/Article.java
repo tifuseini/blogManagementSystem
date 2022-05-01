@@ -13,6 +13,10 @@ public class Article {
 
     private String link;
 
+    private String summary;
+
+
+
 
 
 }
