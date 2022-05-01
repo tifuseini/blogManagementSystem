@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -26,6 +27,10 @@ public class ArticleService {
 
     public Page<Article> getAll(Pageable pageable){
         return articleRepository.findAll(pageable);
+    }
+
+    public Optional<Article> getByLink(String link){
+        return articleRepository.findByLink(link)
     }
 
 
