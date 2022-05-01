@@ -40,6 +40,19 @@ public class ArticleController {
         return "article/index";
     }
 
+    @GetMapping("/show/{link}")
+    public String getPost(@AuthenticationPrincipal UserDetails userDetails,
+                          @PathVariable String link, Model model) {
+        Optional<Article> article = articleService.getByLink(link);
+        if (article.isPresent()) {
+            model.addAttribute("article", article.get());
+        } else {
+            throwNotFoundException(link);
+        }
+
+        return "article/show";
+    }
+
 
 
 
