@@ -1,2 +1,4 @@
-package com.springboot.blog.model;public class User {
+package com.springboot.blog.model;
+
+public class User {
 }
