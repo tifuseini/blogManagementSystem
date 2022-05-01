@@ -15,8 +15,6 @@ public class Article {
 
     private String summary;
 
-
-
-
+    private String body;
 
 }
