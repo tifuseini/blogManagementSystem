@@ -30,7 +30,7 @@ public class ArticleService {
     }
 
     public Optional<Article> getByLink(String link){
-        return articleRepository.findByLink(link)
+        return articleRepository.findByLink(link);
     }
 
 
