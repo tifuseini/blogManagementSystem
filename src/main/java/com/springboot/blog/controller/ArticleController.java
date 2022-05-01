@@ -2,8 +2,13 @@ package com.springboot.blog.controller;
 
 import com.springboot.blog.service.ArticleService;
 import com.springboot.blog.service.UserService;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 @RequestMapping("/article")
@@ -17,4 +22,18 @@ public class ArticleController {
         this.userService = userService;
     }
 
+    @GetMapping
+    public String index(Model model,
+                        @AuthenticationPrincipal UserDetails userDetails,
+                        @RequestParam(required = false, value = "q") String q,
+                        @RequestParam(required = false, value = "page") Integer page,
+                        @RequestParam(required = false, value = "size") Integer size) {
+        if (q == null) {
+            model.addAttribute("articles", articleService.getAll(getPageable(page, size)));
+        } else {
+            model.addAttribute("articles", articleService.search(q, getPageable(page, size)));
+        }
+
+        return "article/index";
+    }
 }
