@@ -2,8 +2,10 @@ package com.springboot.blog.model;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
+import org.springframework.data.elasticsearch.annotations.Field;
+import org.springframework.data.elasticsearch.annotations.FieldType;
 
-@Document(indexName = "ARTICLE_DOCUMENT")
+@Document(indexName = "ARTICLE_DOCUMENT",type = "article")
 public class Article {
 
     @Id
@@ -17,4 +19,6 @@ public class Article {
 
     private String body;
 
+    @Field(type = FieldType.Nested)
+    private User author;
 }
