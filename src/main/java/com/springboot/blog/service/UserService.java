@@ -1,5 +1,6 @@
 package com.springboot.blog.service;
 
+import com.springboot.blog.model.User;
 import com.springboot.blog.repo.UserRepository;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +12,8 @@ public class UserService {
     public UserService(UserRepository userRepository){
         this.userRepository = userRepository;
     }
+
+    public User save
 
 
 }
