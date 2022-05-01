@@ -25,7 +25,7 @@ public class ArticleService {
     }
 
     public Page<Article> getAll(Pageable pageable){
-        return
+        return articleRepository.findAll(pageable);
     }
 
 }
