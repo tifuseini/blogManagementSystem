@@ -43,7 +43,6 @@ public class ArticleService {
 
     public Page<Article> search(String q,Pageable pageable){
         return articleRepository.findByTitleContainingAndBodyContaining(q,q,pageable);
-
     }
 
 
