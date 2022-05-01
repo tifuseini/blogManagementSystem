@@ -64,6 +64,20 @@ public class ArticleController {
     }
 
 
+    @GetMapping("/edit/{id}")
+    public String editPost(@AuthenticationPrincipal UserDetails userDetails, @PathVariable String id, Model model) {
+        Optional<Article> article = articleService.getById(id);
+        if (article.isPresent()) {
+            model.addAttribute("article", article.get());
+        } else {
+            return throwNotFoundException(id);
+        }
+
+        return "article/create";
+    }
+
+
+
     private Pageable getPageable(Integer page, Integer size) {
         if (page == null || size == null) {
             return PageRequest.of(0, 20);
