@@ -41,7 +41,9 @@ public class ArticleService {
         articleRepository.deleteById(id);
     }
 
-    public Page<Article>
+    public Page<Article> search(String q,Pageable pageable){
+
+    }
 
 
 
