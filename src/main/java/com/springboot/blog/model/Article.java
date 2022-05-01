@@ -9,7 +9,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import java.util.Date;
 import java.util.UUID;
 
-@Document(indexName = "ARTICLE_DOCUMENT",type = "article")
+@Document(indexName = "ARTICLE_DOCUMENT")
 @Data
 public class Article {
 
