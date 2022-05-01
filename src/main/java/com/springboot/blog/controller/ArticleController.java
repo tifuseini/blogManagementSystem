@@ -43,9 +43,6 @@ public class ArticleController {
 
 
 
-
-
-
     private Pageable getPageable(Integer page, Integer size) {
         if (page == null || size == null) {
             return PageRequest.of(0, 20);
