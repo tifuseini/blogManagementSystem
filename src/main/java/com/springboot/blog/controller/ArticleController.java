@@ -2,6 +2,8 @@ package com.springboot.blog.controller;
 
 import com.springboot.blog.service.ArticleService;
 import com.springboot.blog.service.UserService;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -35,5 +37,19 @@ public class ArticleController {
         }
 
         return "article/index";
+    }
+
+
+
+
+
+
+
+    private Pageable getPageable(Integer page, Integer size) {
+        if (page == null || size == null) {
+            return PageRequest.of(0, 20);
+        }
+
+        return PageRequest.of(page, size, new Sort(Sort.Direction.DESC, "createdDate"));
     }
 }
