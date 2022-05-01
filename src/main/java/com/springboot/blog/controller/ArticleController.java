@@ -58,6 +58,10 @@ public class ArticleController {
     }
 
 
+    @GetMapping("/new")
+    public String newPost() {
+        return "article/create";
+    }
 
 
     private Pageable getPageable(Integer page, Integer size) {
