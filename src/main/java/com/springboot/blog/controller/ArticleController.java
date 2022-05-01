@@ -1,5 +1,6 @@
 package com.springboot.blog.controller;
 
+import com.springboot.blog.model.Article;
 import com.springboot.blog.service.ArticleService;
 import com.springboot.blog.service.UserService;
 import org.springframework.data.domain.PageRequest;
