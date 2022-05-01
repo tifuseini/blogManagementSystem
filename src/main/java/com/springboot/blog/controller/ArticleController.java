@@ -77,6 +77,11 @@ public class ArticleController {
     }
 
 
+    private String throwNotFoundException(@PathVariable String id) {
+        throw new NotFoundException("Article Not Found for "+id);
+    }
+
+
 
     private Pageable getPageable(Integer page, Integer size) {
         if (page == null || size == null) {
