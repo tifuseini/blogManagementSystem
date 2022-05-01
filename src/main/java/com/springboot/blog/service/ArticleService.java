@@ -37,5 +37,9 @@ public class ArticleService {
         return articleRepository.findById(id);
     }
 
+    public void deleteById(String id){
+        articleRepository.deleteById(id);
+    }
+
 
 }
