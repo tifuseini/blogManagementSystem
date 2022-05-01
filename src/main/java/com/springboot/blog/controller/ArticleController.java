@@ -13,6 +13,7 @@ public class ArticleController {
     private final UserService userService;
 
     public ArticleController(ArticleService articleService,UserService userService){
+        this.articleService = articleService;
 
     }
 }
