@@ -45,5 +45,4 @@ public class ArticleService {
         return articleRepository.findByTitleContainingAndBodyContaining(q,q,pageable);
     }
 
-
 }
