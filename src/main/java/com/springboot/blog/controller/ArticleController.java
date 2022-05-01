@@ -1,6 +1,7 @@
 package com.springboot.blog.controller;
 
 import com.springboot.blog.service.ArticleService;
+import com.springboot.blog.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,4 +10,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ArticleController {
 
     private final ArticleService articleService;
+    private final UserService userService;
 }
