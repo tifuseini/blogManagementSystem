@@ -33,5 +33,9 @@ public class ArticleService {
         return articleRepository.findByLink(link);
     }
 
+    public Optional<Article> getById(String id){
+        return
+    }
+
 
 }
