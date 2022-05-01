@@ -1,2 +1,4 @@
-package com.springboot.blog.repo;public interface UserRepository {
+package com.springboot.blog.repo;
+
+public interface UserRepository {
 }
