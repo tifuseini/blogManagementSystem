@@ -1,2 +1,4 @@
-package com.springboot.blog.service;public class ArticleService {
+package com.springboot.blog.service;
+
+public class ArticleService {
 }

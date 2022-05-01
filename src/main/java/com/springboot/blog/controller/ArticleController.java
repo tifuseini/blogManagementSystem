@@ -6,4 +6,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/article")
 public class ArticleController {
+
+    private final ArticleService articleService;
 }
