@@ -9,6 +9,7 @@ public class Article {
     @Id
     private String id;
 
+    private String title;
 
 
 
