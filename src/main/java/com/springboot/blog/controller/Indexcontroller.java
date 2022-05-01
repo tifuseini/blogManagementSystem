@@ -1,2 +1,4 @@
-package com.springboot.blog.controller;public class Indexcontroller {
+package com.springboot.blog.controller;
+
+public class Indexcontroller {
 }
