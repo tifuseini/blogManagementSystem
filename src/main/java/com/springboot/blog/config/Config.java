@@ -13,7 +13,7 @@ public class Config {
     @Bean
     public RestHighLevelClient client(){
         ClientConfiguration clientConfiguration =
-                ClientConfiguration
+                ClientConfiguration.builder()
 
     }
 }
