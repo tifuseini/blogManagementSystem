@@ -12,7 +12,8 @@ public class Config {
 
     @Bean
     public RestHighLevelClient client(){
-        ClientConfiguration clientConfiguration
+        ClientConfiguration clientConfiguration =
+                ClientConfiguration
 
     }
 }
