@@ -25,4 +25,4 @@ public class SecurityConfig {
                 .pathMatchers(HttpMethod.POST,"/article").authenticated()
                 .pathMatchers("/article/edit/**", "/article/new", "/article/delete/**").authenticated()
                 .and()
-                .csrf()
+                .csrf().disable()
