@@ -43,5 +43,7 @@ public class SecurityConfig {
         return userDetailsRepositoryReactiveAuthenticationManager;
     }
 
+    @Bean
+
 
 }
