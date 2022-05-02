@@ -21,6 +21,6 @@ public class SecurityConfig {
     @Bean
     public SecurityWebFilterChain(ServerHttpSecurity http) throws Exception{
         return http
-                .authorizeExchange().pathMatchers(HttpMethod.GET)
+                .authorizeExchange().pathMatchers(HttpMethod.GET,"/article")
     }
 }
