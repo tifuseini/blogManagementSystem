@@ -16,7 +16,7 @@ public class Config {
         ClientConfiguration clientConfiguration =
                 ClientConfiguration.builder()
                         .connectedTo("localhost:9200").build();
-        return RestClient.create(clientConfiguration)
+        return RestClient.create(clientConfiguration).rest();
 
     }
 }
