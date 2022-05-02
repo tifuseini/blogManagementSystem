@@ -17,7 +17,7 @@ public class BlogReactiveUserDetailsService implements ReactiveUserDetailsServic
     }
 
     @Override
-    public Mono<UserDetails> findByUsername(String username) {
+    public Mono<UserDetails> findByUsername(String s) {
         return null;
     }
 }
