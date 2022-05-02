@@ -35,6 +35,7 @@ public class BaseControllerAdvice {
 
     @ModelAttribute
     public void addCommonAttributes(UserDetails userDetails,Model model){
+        if(userDetails != null)
 
     }
 
