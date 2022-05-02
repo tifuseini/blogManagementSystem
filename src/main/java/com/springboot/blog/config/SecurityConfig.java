@@ -23,4 +23,5 @@ public class SecurityConfig {
         return http
                 .authorizeExchange().pathMatchers(HttpMethod.GET, "/article", "/article/show/**", "/webjars/**", "/css/**", "/favicon.ico", "/").permitAll()
                 .pathMatchers(HttpMethod.POST,"/article").authenticated()
+                .pathMatchers()
 }
