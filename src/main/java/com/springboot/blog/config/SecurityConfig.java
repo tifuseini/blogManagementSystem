@@ -2,6 +2,7 @@ package com.springboot.blog.config;
 
 import com.springboot.blog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -51,7 +52,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    public
+    public ApplicationRunner
 
 
 }
