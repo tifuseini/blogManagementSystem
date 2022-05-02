@@ -55,6 +55,7 @@ public class SecurityConfig {
     public ApplicationRunner applicationRunner(){
         return args -> {
             userService.deleteAll();
+            userService.save()
 
         }
 
