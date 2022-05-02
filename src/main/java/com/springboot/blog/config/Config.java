@@ -14,6 +14,7 @@ public class Config {
     public RestHighLevelClient client(){
         ClientConfiguration clientConfiguration =
                 ClientConfiguration.builder()
+                        .connectedTo("localhost:9200")
 
     }
 }
