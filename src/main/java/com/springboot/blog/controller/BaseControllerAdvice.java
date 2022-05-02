@@ -16,6 +16,8 @@ public class BaseControllerAdvice {
     }
 
     @ExceptionHandler(NotFoundException.class)
-    public String handledNofFoundException(NotFoundException e, Model model)
+    public String handledNofFoundException(NotFoundException e, Model model){
+        model.addAttribute("status",400);
+    }
 
 }
