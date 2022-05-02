@@ -53,7 +53,7 @@ public class SecurityConfig {
 
     @Bean
     public ApplicationRunner applicationRunner(){
-        return
+        return args ->
 
     }
 
