@@ -7,6 +7,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+import java.util.Arrays;
+
 @Service
 public class BlogReactiveUserDetailsService implements ReactiveUserDetailsService {
 
@@ -24,7 +26,7 @@ public class BlogReactiveUserDetailsService implements ReactiveUserDetailsServic
             return Mono.empty();
         }
         return Mono.just( new org.springframework.security.core.userdetails
-                .User(user.getUsername(),user.getPassword(),Arrays))
+                .User(user.getUsername(),user.getPassword(), Arrays.asList()))
 
     }
 }
