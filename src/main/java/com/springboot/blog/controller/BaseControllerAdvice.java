@@ -28,7 +28,7 @@ public class BaseControllerAdvice {
         model.addAttribute("status",500);
         model.addAttribute("exception",e);
 
-        return
+        return "common/error";
     }
 
 
