@@ -63,7 +63,6 @@ public class SecurityConfig {
             userService.save(new User(UUID.randomUUID().toString(),"admin",passwordEncoder()
                     .encode("password"),"ADMIN","Admin of the blog"));
         };
-
     }
 
 
