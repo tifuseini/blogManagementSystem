@@ -36,6 +36,6 @@ public class SecurityConfig {
     }
 
     @Bean
-    public UserDetailsRepositoryReactiveAuthenticationManager
+    public UserDetailsRepositoryReactiveAuthenticationManager authenticationManager
 
 }
