@@ -82,6 +82,17 @@ public class ArticleController {
         throw new NotFoundException("Article Not Found for "+id);
     }
 
+    @PostMapping("/delete/{id}")
+    public String deletePost(@AuthenticationPrincipal UserDetails userDetails, @PathVariable String id, Model model) {
+        articleService.deleteById(id);
+
+        model.addAttribute("message", "Article with id " + id + " deleted successfully!");
+        model.addAttribute("articles", articleService.getAll(new PageRequest(0, 10)));
+
+        return "article/index";
+    }
+
+
 
 
     private Pageable getPageable(Integer page, Integer size) {
