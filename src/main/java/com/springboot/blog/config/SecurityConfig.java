@@ -30,4 +30,4 @@ public class SecurityConfig {
                 .and()
                 .logout()
                 .and()
-                .build()
+                .build();
