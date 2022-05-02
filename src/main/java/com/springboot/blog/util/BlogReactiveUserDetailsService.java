@@ -23,7 +23,7 @@ public class BlogReactiveUserDetailsService implements ReactiveUserDetailsServic
         if (user == null){
             return Mono.empty();
         }
-        return Mono.just( new org.springframework.security.core.userdetails.)
+        return Mono.just( new org.springframework.security.core.userdetails.User())
 
     }
 }
