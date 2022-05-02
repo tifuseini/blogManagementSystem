@@ -22,5 +22,5 @@ public class SecurityConfig {
     public SecurityWebFilterChain(ServerHttpSecurity http) throws Exception{
         return http
                 .authorizeExchange().pathMatchers(HttpMethod.GET, "/article", "/article/show/**", "/webjars/**", "/css/**", "/favicon.ico", "/").permitAll()
-                .pathMatchers()
+                .pathMatchers(HttpMethod.POST)
 }
