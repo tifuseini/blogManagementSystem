@@ -1,8 +1,11 @@
 package com.springboot.blog.controller;
 
+
 import com.springboot.blog.model.Article;
+import com.springboot.blog.model.User;
 import com.springboot.blog.service.ArticleService;
 import com.springboot.blog.service.UserService;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
@@ -12,7 +15,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.webjars.NotFoundException;
+import reactor.core.publisher.Mono;
 
+import java.security.Principal;
 import java.util.Optional;
 
 @Controller
@@ -106,6 +111,14 @@ public class ArticleController {
         return "redirect:/article/show/"+article.getLink();
     }
 
+    @GetMapping("/rest")
+    @ResponseBody
+    public Page<Article> articlesRest(@RequestParam(required = false, value = "page") Integer page,
+                                      @RequestParam(required = false, value = "size") Integer size) {
+        return articleService.getAll(getPageable(page, size));
+    }
+
+
 
 
 
@@ -114,6 +127,6 @@ public class ArticleController {
             return PageRequest.of(0, 20);
         }
 
-        return PageRequest.of(page, size, new Sort(Sort.Direction.DESC, "createdDate"));
+        return PageRequest.of(page, size, Sort.by(Sort.Direction.DESC, "createdDate"));
     }
 }
