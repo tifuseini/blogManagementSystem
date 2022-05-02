@@ -24,7 +24,7 @@ public class BaseControllerAdvice {
     }
 
     @ExceptionHandler(Exception.class)
-    public String handleException(){
+    public String handleException(Exception e,Model model){
 
     }
 
