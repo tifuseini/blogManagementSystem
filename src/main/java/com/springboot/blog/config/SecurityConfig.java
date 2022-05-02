@@ -32,3 +32,5 @@ public class SecurityConfig {
                 .and()
                 .build();
     }
+
+}
