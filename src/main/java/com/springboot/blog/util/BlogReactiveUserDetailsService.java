@@ -8,4 +8,6 @@ import org.springframework.stereotype.Service;
 public class BlogReactiveUserDetailsService implements ReactiveUserDetailsService {
 
     private final UserRepository userRepository;
+
+    public BlogReactiveUserDetailsService()
 }
