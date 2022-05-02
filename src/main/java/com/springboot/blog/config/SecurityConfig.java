@@ -15,6 +15,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.server.SecurityWebFilterChain;
 
+import java.util.UUID;
+
 @Configuration
 @EnableWebFluxSecurity
 @EnableReactiveMethodSecurity
@@ -55,7 +57,7 @@ public class SecurityConfig {
     public ApplicationRunner applicationRunner(){
         return args -> {
             userService.deleteAll();
-            userService.save()
+            userService.save(UUID.randomUUID())
 
         }
 
