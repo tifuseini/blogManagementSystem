@@ -10,5 +10,7 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 public class Config {
 
     @Bean
-    public RestHighLevelClient
+    public RestHighLevelClient client(){
+
+    }
 }
