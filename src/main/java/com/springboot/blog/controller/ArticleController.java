@@ -15,9 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.webjars.NotFoundException;
-import reactor.core.publisher.Mono;
 
-import java.security.Principal;
 import java.util.Optional;
 
 @Controller
