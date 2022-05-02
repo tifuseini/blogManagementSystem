@@ -49,7 +49,6 @@ public class SecurityConfig {
         return userDetailsRepositoryReactiveAuthenticationManager;
     }
 
-
     @Bean
     public PasswordEncoder passwordEncoder(){
         return new BCryptPasswordEncoder();
