@@ -1,2 +1,4 @@
-package com.springboot.blog.util;public class BlogReactiveUserDetailsService {
+package com.springboot.blog.util;
+
+public class BlogReactiveUserDetailsService {
 }
