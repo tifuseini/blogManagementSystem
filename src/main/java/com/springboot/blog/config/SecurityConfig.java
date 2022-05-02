@@ -4,6 +4,7 @@ import com.springboot.blog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.method.configuration.EnableReactiveMethodSecurity;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
 import org.springframework.security.config.web.server.ServerHttpSecurity;
@@ -20,6 +21,6 @@ public class SecurityConfig {
     @Bean
     public SecurityWebFilterChain(ServerHttpSecurity http) throws Exception{
         return http
-                .authorizeExchange().pathMatchers()
+                .authorizeExchange().pathMatchers(HttpMethod.GET)
     }
 }
