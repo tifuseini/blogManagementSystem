@@ -54,7 +54,7 @@ public class SecurityConfig {
     @Bean
     public ApplicationRunner applicationRunner(){
         return args -> {
-            userService
+            userService.deleteAll();
 
         }
 
