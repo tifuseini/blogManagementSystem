@@ -40,7 +40,7 @@ public class SecurityConfig {
         UserDetailsRepositoryReactiveAuthenticationManager userDetailsRepositoryReactiveAuthenticationManager = new UserDetailsRepositoryReactiveAuthenticationManager(blogReactiveUserDetailsService);
         userDetailsRepositoryReactiveAuthenticationManager.setPasswordEncoder(passwordEncoder());
 
-        return userDetailsRepositoryReactiveAuthenticationManager
+        return userDetailsRepositoryReactiveAuthenticationManager;
     }
 
 
