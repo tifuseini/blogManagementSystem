@@ -1,6 +1,7 @@
 package com.springboot.blog.controller;
 
 import com.springboot.blog.service.UserService;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.webjars.NotFoundException;
@@ -15,6 +16,6 @@ public class BaseControllerAdvice {
     }
 
     @ExceptionHandler(NotFoundException.class)
-    public String handledNofFoundException(NotFoundException e,Model model)
+    public String handledNofFoundException(NotFoundException e, Model model)
 
 }
