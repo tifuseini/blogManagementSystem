@@ -19,6 +19,7 @@ public class SecurityConfig {
 
     @Bean
     public SecurityWebFilterChain(ServerHttpSecurity http) throws Exception{
-        return;
+        return http
+                .
     }
 }
