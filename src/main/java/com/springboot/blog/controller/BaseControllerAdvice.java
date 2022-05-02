@@ -1,5 +1,6 @@
 package com.springboot.blog.controller;
 
+import com.springboot.blog.model.User;
 import com.springboot.blog.service.UserService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.ui.Model;
