@@ -1,4 +1,4 @@
 package com.springboot.blog.exception;
 
-public class NotFoundException {
+public class NotFoundException extends {
 }
