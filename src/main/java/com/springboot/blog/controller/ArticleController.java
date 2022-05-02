@@ -89,7 +89,7 @@ public class ArticleController {
         articleService.deleteById(id);
 
         model.addAttribute("message", "Article with id " + id + " deleted successfully!");
-        model.addAttribute("articles", articleService.getAll(new PageRequest(0, 10)));
+        model.addAttribute("articles", articleService.getAll( PageRequest.of(0, 10)));
 
         return "article/index";
     }
