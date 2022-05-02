@@ -60,7 +60,7 @@ public class SecurityConfig {
             userService.deleteAll();
             userService.save( new User(UUID.randomUUID().toString(),"user",passwordEncoder()
                     .encode("password"),"USER","User of the blog"));
-            userService.save(new User(UUID.randomUUID()))
+            userService.save(new User(UUID.randomUUID().toString()))
 
         };
 
