@@ -1,6 +1,7 @@
 package com.springboot.blog.controller;
 
 import com.springboot.blog.service.UserService;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -33,7 +34,8 @@ public class BaseControllerAdvice {
     }
 
     @ModelAttribute
-    public void addCommonAttributes(){
+    public void addCommonAttributes(UserDetails userDetails,Model model){
+
 
     }
 
