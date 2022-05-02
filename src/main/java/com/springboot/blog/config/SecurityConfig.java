@@ -59,7 +59,7 @@ public class SecurityConfig {
         return args -> {
             userService.deleteAll();
             userService.save( new User(UUID.randomUUID().toString(),"user",passwordEncoder()
-                    .encode("password"),"USER","User of the blog"))
+                    .encode("password"),"USER","User of the blog"));
 
         };
 
