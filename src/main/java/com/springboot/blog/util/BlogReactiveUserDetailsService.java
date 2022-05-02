@@ -23,7 +23,7 @@ public class BlogReactiveUserDetailsService implements ReactiveUserDetailsServic
         if (user == null){
             return Mono.empty();
         }
-        return Mono.just( new )
+        return Mono.just( new org.)
 
     }
 }
