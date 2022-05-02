@@ -7,4 +7,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 public class BaseControllerAdvice {
 
     private final UserService userService;
+
+    public BaseControllerAdvice(UserService userService){
+        this.userService = userService;
+    }
 }
