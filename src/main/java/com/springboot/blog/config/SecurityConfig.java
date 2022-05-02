@@ -57,7 +57,7 @@ public class SecurityConfig {
     public ApplicationRunner applicationRunner(){
         return args -> {
             userService.deleteAll();
-            userService.save(UUID.randomUUID().toString(),"user",passwordEncoder().encode("password"),"USER")
+            userService.save(UUID.randomUUID().toString(),"user",passwordEncoder().encode("password"),"USER","User of the blog"))
 
         }
 
