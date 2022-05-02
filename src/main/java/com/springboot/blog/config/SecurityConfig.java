@@ -18,5 +18,5 @@ public class SecurityConfig {
     private UserService userService;
 
     @Bean
-    public SecurityWebFilterChain(ServerHttpSecurity http)
+    public SecurityWebFilterChain(ServerHttpSecurity http) throws
 }
