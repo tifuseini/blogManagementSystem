@@ -27,3 +27,4 @@ public class SecurityConfig {
                 .and()
                 .csrf().disable()
                 .formLogin()
+                .and()
