@@ -1,5 +1,6 @@
 package com.springboot.blog.util;
 
+import com.springboot.blog.model.User;
 import com.springboot.blog.repo.UserRepository;
 import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
 import org.springframework.security.core.userdetails.UserDetails;
