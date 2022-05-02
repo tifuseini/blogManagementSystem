@@ -26,7 +26,7 @@ public class BlogReactiveUserDetailsService implements ReactiveUserDetailsServic
             return Mono.empty();
         }
         return Mono.just( new org.springframework.security.core.userdetails
-                .User(user.getUsername(),user.getPassword(), Arrays.asList()))
+                .User(user.getUsername(),user.getPassword(), Arrays.asList(new)))
 
     }
 }
