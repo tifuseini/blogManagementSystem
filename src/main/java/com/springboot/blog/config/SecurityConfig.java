@@ -12,5 +12,5 @@ import org.springframework.security.config.annotation.web.reactive.EnableWebFlux
 public class SecurityConfig {
 
     @Autowired
-    private UserService userService
+    private UserService userService;
 }
