@@ -25,6 +25,7 @@ public class BaseControllerAdvice {
 
     @ExceptionHandler(Exception.class)
     public String handleException(Exception e,Model model){
+        model.addAttribute("status",500);
 
     }
 
