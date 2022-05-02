@@ -1,2 +1,4 @@
-package com.springboot.blog.exception;public class NotFoundException {
+package com.springboot.blog.exception;
+
+public class NotFoundException {
 }
