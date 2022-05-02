@@ -1,2 +1,4 @@
-package com.springboot.blog.controller;public class BaseControllerAdvice {
+package com.springboot.blog.controller;
+
+public class BaseControllerAdvice {
 }
