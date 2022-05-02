@@ -9,5 +9,7 @@ public class BlogReactiveUserDetailsService implements ReactiveUserDetailsServic
 
     private final UserRepository userRepository;
 
-    public BlogReactiveUserDetailsService(UserRepository)
+    public BlogReactiveUserDetailsService(UserRepository userRepository){
+
+    }
 }
