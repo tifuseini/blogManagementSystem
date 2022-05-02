@@ -19,10 +19,10 @@ public class SecurityConfig {
     private UserService userService;
 
     @Bean
-    public SecurityWebFilterChain SecurityWebFilterChain(ServerHttpSecurity http) throws Exception{
+    public SecurityWebFilterChain SecurityWebFilterChain(ServerHttpSecurity http) throws Exception {
         return http
                 .authorizeExchange().pathMatchers(HttpMethod.GET, "/article", "/article/show/**", "/webjars/**", "/css/**", "/favicon.ico", "/").permitAll()
-                .pathMatchers(HttpMethod.POST,"/article").authenticated()
+                .pathMatchers(HttpMethod.POST, "/article").authenticated()
                 .pathMatchers("/article/edit/**", "/article/new", "/article/delete/**").authenticated()
                 .and()
                 .csrf().disable()
@@ -31,3 +31,4 @@ public class SecurityConfig {
                 .logout()
                 .and()
                 .build();
+    }
