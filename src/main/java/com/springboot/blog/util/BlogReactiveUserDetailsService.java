@@ -2,6 +2,7 @@ package com.springboot.blog.util;
 
 import com.springboot.blog.model.User;
 import com.springboot.blog.repo.UserRepository;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
@@ -26,7 +27,7 @@ public class BlogReactiveUserDetailsService implements ReactiveUserDetailsServic
             return Mono.empty();
         }
         return Mono.just( new org.springframework.security.core.userdetails
-                .User(user.getUsername(),user.getPassword(), Arrays.asList(new)))
+                .User(user.getUsername(),user.getPassword(), Arrays.asList(new SimpleGrantedAuthority())))
 
     }
 }
