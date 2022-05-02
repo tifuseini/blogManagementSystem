@@ -33,6 +33,9 @@ public class BaseControllerAdvice {
     }
 
     @ModelAttribute
+    public void addCommonAttributes(){
+
+    }
 
 
 
