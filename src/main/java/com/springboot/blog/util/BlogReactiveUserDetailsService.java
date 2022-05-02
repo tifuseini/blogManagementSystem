@@ -21,7 +21,7 @@ public class BlogReactiveUserDetailsService implements ReactiveUserDetailsServic
     public Mono<UserDetails> findByUsername(String s) {
         User user = userRepository.findByUsername(s);
         if (user == null){
-            return
+            return Mono.empty()
         }
 
     }
