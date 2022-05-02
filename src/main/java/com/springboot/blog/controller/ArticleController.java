@@ -90,6 +90,23 @@ public class ArticleController {
     }
 
 
+    @PostMapping
+    public String savePost(@AuthenticationPrincipal UserDetails userDetails, Article article, Model model) {
+        if (article.getId() == null || article.getId().length() == 0) {
+            User user = userService.getByUsername(userDetails.getUsername());
+            article.setAuthor(user);
+        } else {
+            Optional<Article> optionalArticle = articleService.getById(article.getId());
+            if (optionalArticle.isPresent()) {
+                article.setAuthor(optionalArticle.get().getAuthor());
+            }
+        }
+        articleService.save(article);
+
+        return "redirect:/article/show/"+article.getLink();
+    }
+
+
 
 
     private Pageable getPageable(Integer page, Integer size) {
