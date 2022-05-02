@@ -52,7 +52,9 @@ public class SecurityConfig {
     }
 
     @Bean
-    public ApplicationRunner applicationRunner
+    public ApplicationRunner applicationRunner(){
+
+    }
 
 
 }
