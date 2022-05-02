@@ -40,7 +40,6 @@ public class BaseControllerAdvice {
             User user = userService.getByUsername(userDetails.getUsername());
             model.addAttribute("user",user);
         }
-
     }
 
 
