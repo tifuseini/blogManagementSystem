@@ -29,3 +29,4 @@ public class SecurityConfig {
                 .formLogin()
                 .and()
                 .logout()
+                .and()
