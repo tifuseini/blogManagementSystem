@@ -64,5 +64,4 @@ public class SecurityConfig {
                     .encode("password"),"ADMIN","Admin of the blog"));
         };
     }
-
 }
