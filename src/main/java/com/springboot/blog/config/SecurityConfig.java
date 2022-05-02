@@ -26,3 +26,4 @@ public class SecurityConfig {
                 .pathMatchers("/article/edit/**", "/article/new", "/article/delete/**").authenticated()
                 .and()
                 .csrf().disable()
+                .formLogin()
