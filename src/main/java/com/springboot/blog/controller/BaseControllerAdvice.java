@@ -23,4 +23,7 @@ public class BaseControllerAdvice {
         return "common/error";
     }
 
+    @ExceptionHandler
+
+
 }
