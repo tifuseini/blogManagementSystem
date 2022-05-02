@@ -41,5 +41,4 @@ public class BaseControllerAdvice {
             model.addAttribute("user",user);
         }
     }
-
 }
