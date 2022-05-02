@@ -38,6 +38,7 @@ public class BaseControllerAdvice {
     public void addCommonAttributes(UserDetails userDetails,Model model){
         if(userDetails != null){
             User user = userService.getByUsername(userDetails.getUsername());
+            model.addAttribute("user",user)
 
         }
 
