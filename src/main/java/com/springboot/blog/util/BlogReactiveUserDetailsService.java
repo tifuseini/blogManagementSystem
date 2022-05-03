@@ -2,6 +2,7 @@ package com.springboot.blog.util;
 
 import com.springboot.blog.model.User;
 import com.springboot.blog.repo.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,6 +14,7 @@ import java.util.Arrays;
 @Service
 public class BlogReactiveUserDetailsService implements ReactiveUserDetailsService {
 
+    @Autowired
     private final UserRepository userRepository;
 
     public BlogReactiveUserDetailsService(UserRepository userRepository){
